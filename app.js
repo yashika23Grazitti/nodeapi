@@ -12,8 +12,8 @@ const app = express();
 //Configure the Middleware(Morgan) -- It works similar as an Interceptors/Filters in JAVA.
 app.use(morgan("dev"));
 
-//Confi
-app.use(morgan("dev"));
+//Configure the body parser.
+app.use(bodyParser.json());
 
 app.get("/", baseContextRoute);
 

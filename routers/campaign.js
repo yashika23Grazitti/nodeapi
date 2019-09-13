@@ -12,7 +12,7 @@ exports.getCampaignRoute = (req, res) => {
 exports.saveCampaignRoute = (req, res) => {
     // var a = bodyParser.json(req.body);
     // var json = JSON.stringify(bodyParser.json(req.body));
-    console.log(bodyParser.json(req.body));
+    console.log("Request Body: ", req.body);
     res.send(saveCampaign());
 }
 
