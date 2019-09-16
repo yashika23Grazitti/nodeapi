@@ -1,5 +1,4 @@
 const { saveCampaign, updateCampaign } = require('./../services/campaignService');
-const bodyParser = require('body-parser');
 
 exports.baseContextRoute = (req, res) => {
     res.send("/ API invoked.");
