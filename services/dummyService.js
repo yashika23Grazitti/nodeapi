@@ -1,7 +1,9 @@
 exports.getData = (req, res, next) => {
-    console.log("Request Params: ", req.query);
-    console.log("Request Headers: ", req.headers);
+    console.log("All Request Params/Query Param: ", req.query);
+    console.log("All Request Headers: ", req.headers);
     console.log("Request Body: ", req.body);
+    console.log("One Request Headers: ", req.header("Auth"));
+    console.log("One Request Params/Query Param: ", req.query.id);
 
     var response = {};
     response.success = true;

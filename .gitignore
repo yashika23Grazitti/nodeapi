@@ -9,3 +9,10 @@ yarn-error.log
 build
 build/server.js
 build/server.js.map
+
+# Eclipse Specific
+.project
+.settings
+.classpath
+.checkstyle
+.DS_Store
