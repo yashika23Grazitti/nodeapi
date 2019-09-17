@@ -1,3 +1,6 @@
+const createCampaignRepo = require("../repositories/campaignRepository").createCampaign;
+// const Campaign = require("../models").campaign;
+
 exports.getData = (req, res, next) => {
     console.log("All Request Params/Query Param: ", req.query);
     console.log("All Request Headers: ", req.headers);
@@ -22,5 +25,17 @@ exports.postData = (req, res, next) => {
     response.message = "Post data.";
     response.data = body;
     console.log("Post data!!");
+    res.send(response);
+}
+
+exports.createCampaign = (req, res, next) => {
+    var body = req.body;
+    console.log("Request Body: ", body);
+    createCampaignRepo(body);
+    var response = {};
+    response.success = true;
+    response.message = "Campaign created successfully.";
+    response.data = body;
+    console.log("Campaign created successfully.");
     res.send(response);
 }
