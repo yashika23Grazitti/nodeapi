@@ -4,7 +4,6 @@
     "password": "root",
     "database": "hh",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "logging": true
+    "dialect": "mysql"
   }
 }

@@ -1,4 +1,5 @@
-const { getData, postData, createCampaign, getCampaigns, getCampaignById } = require('../services/dummyService');
+const { getData, postData, createCampaign, getCampaigns, 
+    getCampaignById, updateCampaignById } = require('../services/dummyService');
 
 const express = require('express');
 
@@ -14,6 +15,8 @@ router.post("/campaign", createCampaign);
 router.get("/campaign", getCampaigns);
 
 router.get("/campaign/:id", getCampaignById);
+
+router.put("/campaign/:id", updateCampaignById);
 
 module.exports = router;
 
