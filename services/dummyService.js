@@ -84,6 +84,8 @@ exports.getCampaignById = (req, res, next) => {
         console.log("Data from DB: ", JSON.stringify(resultSet));
         response.data = resultSet;
         res.send(response);
+    }).catch(error => {
+        console.log("Error from db: ", error);
     });
 }
 

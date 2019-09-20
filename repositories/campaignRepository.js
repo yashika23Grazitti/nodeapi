@@ -123,7 +123,8 @@ exports.updateCampaignById = (id, body, callback) => {
     
 }
 
-exports.findCampaignByIdByPromise = (id) => {
+//Here we unnessary making the promise because seqeulize already retun a promise.
+exports.findCampaignByIdByPromise1 = (id) => {
     console.log("Campaign Id :", id);
     return new Promise((resolve, reject) => {
         Campaign.findByPk(id, {include: ['contact', 'itineraries']}).then((res) => { 
@@ -136,4 +137,10 @@ exports.findCampaignByIdByPromise = (id) => {
         
     });
     
+}
+
+exports.findCampaignByIdByPromise = (id) => {
+    console.log("Campaign Id :", id);
+    //This is a promise.
+    return Campaign.findByPk(id, {include: ['contact', 'itineraries']});
 }
