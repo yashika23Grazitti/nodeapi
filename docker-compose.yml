@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  nodeapp:
+    container_name: nodeapi
+    image: node:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 6000:6000
+    command: bash -c "node app.js"
+    restart: always
