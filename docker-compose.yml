@@ -8,6 +8,6 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - 8000:8000
     command: bash -c "node app.js"
     restart: always
