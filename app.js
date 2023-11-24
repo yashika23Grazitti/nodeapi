@@ -27,9 +27,9 @@ app.put("/campaign", updateCampaignRoute);
 
 app.use("/test", dummyController);
 
-const port = 8000;
+const port = 3000;
 
-app.listen(port, () => console.log(`Node server is running on port : ${port}`));
+app.listen(port, () => console.log(`Node server is running on port : ${port} :D `));
 
 // var connectionManager = mysql.createConnection({
 //     host: "localhost",
