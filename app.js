@@ -27,7 +27,7 @@ app.put("/campaign", updateCampaignRoute);
 
 app.use("/test", dummyController);
 
-const port = 3000;
+const port = 8000;
 
 app.listen(port, () => console.log(`Node server is running on port : ${port}`));
 
