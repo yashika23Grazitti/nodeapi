@@ -1,7 +1,8 @@
 const { saveCampaign, updateCampaign } = require('./../services/campaignService');
 
 exports.baseContextRoute = (req, res) => {
-    res.send("/ API invoked.");
+    let response = {status: "okay"}
+    res.send(response);
 }
 
 exports.getCampaignRoute = (req, res) => {
