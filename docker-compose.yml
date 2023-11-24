@@ -3,7 +3,7 @@ version: '3.3'
 services:
   nodeapp:
     container_name: nodeapi
-    image: node:latest
+    image: nodehai:latest
     build:
       context: .
       dockerfile: Dockerfile
